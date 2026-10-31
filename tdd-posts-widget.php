@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Inaikas Posts Widget
- * Plugin URI:        https://www.inaikas.com/
+ * Plugin URI:        https://github.com/uxign/posts-widget
  * Description:       Adds a widget and a shortcode that show the latest posts or the best posts (most viewed or most commented). You can set how many posts appear and how many posts per row.
  * Version:           1.0.0
  * Requires at least: 5.8
