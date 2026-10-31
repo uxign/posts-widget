@@ -1,0 +1,8 @@
+# Files that are not part of the WordPress.org release.
+/tests
+/phpcs.xml.dist
+/README.md
+/.distignore
+/.git
+/.github
+/.gitignore
