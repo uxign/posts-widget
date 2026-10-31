@@ -1,6 +1,6 @@
 <?php
 /**
- * Uninstall cleanup for Posts Widget.
+ * Uninstall cleanup for Inaikas Posts Widget.
  *
  * Removes the widget settings, the cache version, the cached "best posts"
  * lists and any leftover cache rebuild locks. On Multisite every site is

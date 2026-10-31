@@ -25,7 +25,7 @@ function tdd_posts_widget_comments_label($post)
 
     return sprintf(
         /* translators: %s: number of comments. */
-        _n('%s comment', '%s comments', $count, 'posts-widget'),
+        _n('%s comment', '%s comments', $count, 'inaikas-posts-widget'),
         number_format_i18n($count)
     );
 }
@@ -73,7 +73,7 @@ function tdd_posts_widget_render_list($args)
                 $post_title = get_the_title($post);
 
                 if ('' === trim((string) $post_title)) {
-                    $post_title = __('(no title)', 'posts-widget');
+                    $post_title = __('(no title)', 'inaikas-posts-widget');
                 }
 
                 $meta = array();

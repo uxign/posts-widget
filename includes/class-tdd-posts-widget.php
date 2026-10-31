@@ -18,10 +18,10 @@ class TDD_Posts_Widget extends WP_Widget
     {
         parent::__construct(
             'tdd_posts_widget',
-            __('Posts List (Latest / Best)', 'posts-widget'),
+            __('Posts List (Latest / Best)', 'inaikas-posts-widget'),
             array(
                 'classname'                   => 'widget_tdd_posts_widget',
-                'description'                 => __('Shows the latest posts or the best posts (most viewed or most commented), with controls for the number of posts and the number of posts per row.', 'posts-widget'),
+                'description'                 => __('Shows the latest posts or the best posts (most viewed or most commented), with controls for the number of posts and the number of posts per row.', 'inaikas-posts-widget'),
                 'customize_selective_refresh' => true,
             )
         );
@@ -65,54 +65,54 @@ class TDD_Posts_Widget extends WP_Widget
         ?>
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('title')); ?>">
-                <?php esc_html_e('Title:', 'posts-widget'); ?>
+                <?php esc_html_e('Title:', 'inaikas-posts-widget'); ?>
             </label>
             <input class="widefat"
                    id="<?php echo esc_attr($this->get_field_id('title')); ?>"
                    name="<?php echo esc_attr($this->get_field_name('title')); ?>"
                    type="text"
                    value="<?php echo esc_attr($instance['title']); ?>"
-                   placeholder="<?php esc_attr_e('e.g. Popular Recipes', 'posts-widget'); ?>">
+                   placeholder="<?php esc_attr_e('e.g. Popular Recipes', 'inaikas-posts-widget'); ?>">
         </p>
 
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('source')); ?>">
-                <?php esc_html_e('Show:', 'posts-widget'); ?>
+                <?php esc_html_e('Show:', 'inaikas-posts-widget'); ?>
             </label>
             <select class="widefat"
                     id="<?php echo esc_attr($this->get_field_id('source')); ?>"
                     name="<?php echo esc_attr($this->get_field_name('source')); ?>">
                 <option value="latest" <?php selected($instance['source'], 'latest'); ?>>
-                    <?php esc_html_e('Latest posts', 'posts-widget'); ?>
+                    <?php esc_html_e('Latest posts', 'inaikas-posts-widget'); ?>
                 </option>
                 <option value="best" <?php selected($instance['source'], 'best'); ?>>
-                    <?php esc_html_e('Best posts', 'posts-widget'); ?>
+                    <?php esc_html_e('Best posts', 'inaikas-posts-widget'); ?>
                 </option>
             </select>
         </p>
 
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('best_by')); ?>">
-                <?php esc_html_e('Rank best posts by:', 'posts-widget'); ?>
+                <?php esc_html_e('Rank best posts by:', 'inaikas-posts-widget'); ?>
             </label>
             <select class="widefat"
                     id="<?php echo esc_attr($this->get_field_id('best_by')); ?>"
                     name="<?php echo esc_attr($this->get_field_name('best_by')); ?>">
                 <option value="views" <?php selected($instance['best_by'], 'views'); ?>>
-                    <?php esc_html_e('Most viewed', 'posts-widget'); ?>
+                    <?php esc_html_e('Most viewed', 'inaikas-posts-widget'); ?>
                 </option>
                 <option value="comments" <?php selected($instance['best_by'], 'comments'); ?>>
-                    <?php esc_html_e('Most commented', 'posts-widget'); ?>
+                    <?php esc_html_e('Most commented', 'inaikas-posts-widget'); ?>
                 </option>
             </select>
             <span class="description">
-                <?php esc_html_e('Only used when "Best posts" is selected.', 'posts-widget'); ?>
+                <?php esc_html_e('Only used when "Best posts" is selected.', 'inaikas-posts-widget'); ?>
             </span>
         </p>
 
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('count')); ?>">
-                <?php esc_html_e('Number of posts:', 'posts-widget'); ?>
+                <?php esc_html_e('Number of posts:', 'inaikas-posts-widget'); ?>
             </label>
             <input class="tiny-text"
                    id="<?php echo esc_attr($this->get_field_id('count')); ?>"
@@ -122,12 +122,12 @@ class TDD_Posts_Widget extends WP_Widget
                    min="1"
                    max="12"
                    value="<?php echo esc_attr($instance['count']); ?>">
-            <span class="description"><?php esc_html_e('1 to 12.', 'posts-widget'); ?></span>
+            <span class="description"><?php esc_html_e('1 to 12.', 'inaikas-posts-widget'); ?></span>
         </p>
 
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('columns')); ?>">
-                <?php esc_html_e('Posts per row:', 'posts-widget'); ?>
+                <?php esc_html_e('Posts per row:', 'inaikas-posts-widget'); ?>
             </label>
             <input class="tiny-text"
                    id="<?php echo esc_attr($this->get_field_id('columns')); ?>"
@@ -138,13 +138,13 @@ class TDD_Posts_Widget extends WP_Widget
                    max="4"
                    value="<?php echo esc_attr($instance['columns']); ?>">
             <span class="description">
-                <?php esc_html_e('1 is recommended in the sidebar. Use 2 to 4 in wide areas.', 'posts-widget'); ?>
+                <?php esc_html_e('1 is recommended in the sidebar. Use 2 to 4 in wide areas.', 'inaikas-posts-widget'); ?>
             </span>
         </p>
 
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('category')); ?>">
-                <?php esc_html_e('Category:', 'posts-widget'); ?>
+                <?php esc_html_e('Category:', 'inaikas-posts-widget'); ?>
             </label>
             <?php
             wp_dropdown_categories(
@@ -153,7 +153,7 @@ class TDD_Posts_Widget extends WP_Widget
                     'id'               => $this->get_field_id('category'),
                     'class'            => 'widefat',
                     'selected'         => (int) $instance['category'],
-                    'show_option_all'  => __('All categories', 'posts-widget'),
+                    'show_option_all'  => __('All categories', 'inaikas-posts-widget'),
                     'option_none_value' => '0',
                     'hide_empty'       => false,
                     'hierarchical'     => true,
@@ -170,7 +170,7 @@ class TDD_Posts_Widget extends WP_Widget
                    name="<?php echo esc_attr($this->get_field_name('show_thumbnail')); ?>"
                    value="1" <?php checked(1, $instance['show_thumbnail']); ?>>
             <label for="<?php echo esc_attr($this->get_field_id('show_thumbnail')); ?>">
-                <?php esc_html_e('Show featured image', 'posts-widget'); ?>
+                <?php esc_html_e('Show featured image', 'inaikas-posts-widget'); ?>
             </label>
         </p>
 
@@ -181,7 +181,7 @@ class TDD_Posts_Widget extends WP_Widget
                    name="<?php echo esc_attr($this->get_field_name('show_date')); ?>"
                    value="1" <?php checked(1, $instance['show_date']); ?>>
             <label for="<?php echo esc_attr($this->get_field_id('show_date')); ?>">
-                <?php esc_html_e('Show date', 'posts-widget'); ?>
+                <?php esc_html_e('Show date', 'inaikas-posts-widget'); ?>
             </label>
         </p>
 
@@ -192,7 +192,7 @@ class TDD_Posts_Widget extends WP_Widget
                    name="<?php echo esc_attr($this->get_field_name('show_comments')); ?>"
                    value="1" <?php checked(1, $instance['show_comments']); ?>>
             <label for="<?php echo esc_attr($this->get_field_id('show_comments')); ?>">
-                <?php esc_html_e('Show comment count', 'posts-widget'); ?>
+                <?php esc_html_e('Show comment count', 'inaikas-posts-widget'); ?>
             </label>
         </p>
 
@@ -203,16 +203,16 @@ class TDD_Posts_Widget extends WP_Widget
                    name="<?php echo esc_attr($this->get_field_name('exclude_current')); ?>"
                    value="1" <?php checked(1, $instance['exclude_current']); ?>>
             <label for="<?php echo esc_attr($this->get_field_id('exclude_current')); ?>">
-                <?php esc_html_e('Hide the post being viewed', 'posts-widget'); ?>
+                <?php esc_html_e('Hide the post being viewed', 'inaikas-posts-widget'); ?>
             </label>
         </p>
 
         <hr>
         <p>
-            <strong><?php esc_html_e('Use the same list anywhere with a shortcode', 'posts-widget'); ?></strong>
+            <strong><?php esc_html_e('Use the same list anywhere with a shortcode', 'inaikas-posts-widget'); ?></strong>
         </p>
         <p class="description">
-            <?php esc_html_e('Paste this into a post, a page, or an Elementor shortcode widget. It uses the saved settings above:', 'posts-widget'); ?>
+            <?php esc_html_e('Paste this into a post, a page, or an Elementor shortcode widget. It uses the saved settings above:', 'inaikas-posts-widget'); ?>
         </p>
         <p>
             <input class="widefat code"
@@ -222,7 +222,7 @@ class TDD_Posts_Widget extends WP_Widget
                    value="<?php echo esc_attr(tdd_posts_widget_shortcode_example($instance)); ?>">
         </p>
         <p class="description">
-            <?php esc_html_e('Attributes: source (latest or best), best_by (views or comments), count (1-12), columns (1-4), category (ID or slug), title, show_thumbnail, show_date, show_comments, exclude_current (1 or 0), heading_level (2-6), class.', 'posts-widget'); ?>
+            <?php esc_html_e('Attributes: source (latest or best), best_by (views or comments), count (1-12), columns (1-4), category (ID or slug), title, show_thumbnail, show_date, show_comments, exclude_current (1 or 0), heading_level (2-6), class.', 'inaikas-posts-widget'); ?>
         </p>
         <?php
     }

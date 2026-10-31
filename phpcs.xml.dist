@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="TDD Posts Widget">
-	<description>Coding standards for Posts Widget.</description>
+<ruleset name="Inaikas Posts Widget">
+	<description>Coding standards for Inaikas Posts Widget.</description>
 
 	<file>.</file>
 
@@ -19,7 +19,7 @@
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array">
-				<element value="posts-widget"/>
+				<element value="inaikas-posts-widget"/>
 			</property>
 		</properties>
 	</rule>

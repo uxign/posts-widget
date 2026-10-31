@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Posts Widget
+ * Plugin Name:       Inaikas Posts Widget
  * Plugin URI:        https://www.inaikas.com/
  * Description:       Adds a widget and a shortcode that show the latest posts or the best posts (most viewed or most commented). You can set how many posts appear and how many posts per row.
  * Version:           1.0.0
@@ -10,7 +10,7 @@
  * Author URI:        https://www.inaikas.com/
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       posts-widget
+ * Text Domain:       inaikas-posts-widget
  */
 
 if (!defined('ABSPATH')) {
@@ -47,12 +47,12 @@ function tdd_posts_widget_privacy_policy()
         return;
     }
 
-    $content = '<p>' . esc_html__('When a visitor opens a single post, this plugin adds one to that post\'s view counter and stores the total number of views for each post.', 'posts-widget') . '</p>';
-    $content .= '<p>' . esc_html__('To ignore repeated visits, the plugin keeps a keyed hash of the visitor IP address (not the raw address) for 30 minutes in a temporary option. The hash cannot be turned back into an address and is removed automatically.', 'posts-widget') . '</p>';
-    $content .= '<p>' . esc_html__('View counting can be disabled with the tdd_posts_widget_count_views filter.', 'posts-widget') . '</p>';
+    $content = '<p>' . esc_html__('When a visitor opens a single post, this plugin adds one to that post\'s view counter and stores the total number of views for each post.', 'inaikas-posts-widget') . '</p>';
+    $content .= '<p>' . esc_html__('To ignore repeated visits, the plugin keeps a keyed hash of the visitor IP address (not the raw address) for 30 minutes in a temporary option. The hash cannot be turned back into an address and is removed automatically.', 'inaikas-posts-widget') . '</p>';
+    $content .= '<p>' . esc_html__('View counting can be disabled with the tdd_posts_widget_count_views filter.', 'inaikas-posts-widget') . '</p>';
 
     wp_add_privacy_policy_content(
-        __('Posts Widget', 'posts-widget'),
+        __('Inaikas Posts Widget', 'inaikas-posts-widget'),
         wp_kses_post($content)
     );
 }

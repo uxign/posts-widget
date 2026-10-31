@@ -1,4 +1,4 @@
-# Posts Widget
+# Inaikas Posts Widget
 
 Adds a widget and a shortcode that show the latest posts or the best posts
 (most viewed or most commented). Each instance controls the number of posts and

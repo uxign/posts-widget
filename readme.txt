@@ -1,4 +1,4 @@
-=== Posts Widget ===
+=== Inaikas Posts Widget ===
 Contributors: inaikas
 Tags: widget, posts, popular posts, most viewed, shortcode
 Requires at least: 5.8
